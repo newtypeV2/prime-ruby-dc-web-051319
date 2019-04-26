@@ -5,18 +5,9 @@ def prime?(number)
   elsif number==2
   true
   else
-  array=(2...number).to_a
-  flag = 0
-  array.each do |x|
-    rem=number%x
-    if rem==0
-      flag+=1
-    end
-  end
-  if flag>0
-    false
-  else
-    true
+  array=(2..number-1).to_a.all?
+  array.each do |testy|
+    number%testy!=0
   end
 end
 end
