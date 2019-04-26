@@ -6,8 +6,16 @@ def prime?(number)
   true
   else
   array=(2...number).to_a
-  array.each.all? do |testy|
-    number%testy!=0
+  flag = 0
+  array.each do |x|
+    if number%x==0
+      flag+=1
+    end
   end
+  if flag>0
+    false
+  else
+  true
+end
 end
 end
