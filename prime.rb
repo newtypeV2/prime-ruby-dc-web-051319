@@ -8,15 +8,14 @@ def prime?(number)
   array=(2...number).to_a
   flag = 0
   array.each do |x|
-    rem=number%x
-    if rem==0
+    if number%x==0
       flag+=1
     end
   end
   if flag>0
     false
   else
-    true
-  end
+  true
+end
 end
 end
