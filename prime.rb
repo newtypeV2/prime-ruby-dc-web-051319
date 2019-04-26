@@ -5,7 +5,7 @@ def prime?(number)
   elsif number==2
   true
   else
-  array=(2..number-1).to_a
+  array=(2...number).to_a
   array.each.all? do |testy|
     number%testy!=0
   end
